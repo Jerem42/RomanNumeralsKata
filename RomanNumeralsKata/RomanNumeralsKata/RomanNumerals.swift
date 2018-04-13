@@ -23,12 +23,13 @@ struct RomanNumerals {
 
     func convert(number: Int) -> String {
         var result = String()
+        var remainingNumber = number
 
         for romanTuple in romanAssociationArray {
-            let repeatedRoman = Int(number / romanTuple.numeral)
+            let repeatedRoman = Int(remainingNumber / romanTuple.numeral)
             if repeatedRoman >= 1 {
-                result = String(repeating: romanTuple.roman, count: repeatedRoman)
-                break
+                result += String(repeating: romanTuple.roman, count: repeatedRoman)
+                remainingNumber -= (repeatedRoman * romanTuple.numeral)
             }
         }
         return result

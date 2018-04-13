@@ -85,4 +85,13 @@ class RomanNumeralsTests: XCTestCase {
         // Then
         XCTAssertEqual(result, "II")
     }
+
+    func testConvert_should_return_XVI_when_input_is_16() {
+        // When
+        let result = sut.convert(number: 16)
+
+        // Then
+        XCTAssertEqual(result, "XVI")
+    }
+
 }
