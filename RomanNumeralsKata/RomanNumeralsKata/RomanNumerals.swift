@@ -33,10 +33,8 @@ struct RomanNumerals {
 
         for romanTuple in romanAssociationArray {
             let repeatedRoman = Int(remainingNumber / romanTuple.numeral)
-            if repeatedRoman >= 1 {
-                result += String(repeating: romanTuple.roman, count: repeatedRoman)
-                remainingNumber -= (repeatedRoman * romanTuple.numeral)
-            }
+            result += String(repeating: romanTuple.roman, count: repeatedRoman)
+            remainingNumber -= (repeatedRoman * romanTuple.numeral)
         }
         return result
     }
