@@ -142,4 +142,12 @@ class RomanNumeralsTests: XCTestCase {
         XCTAssertEqual(result, "CM")
     }
 
+    func testConvert_should_return_empty_string_when_input_is_0() {
+        // When
+        let result = sut.convert(number: 0)
+
+        // Then
+        XCTAssertEqual(result, "")
+    }
+
 }
