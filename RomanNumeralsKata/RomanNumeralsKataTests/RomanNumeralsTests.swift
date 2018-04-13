@@ -10,143 +10,110 @@ import XCTest
 @testable import RomanNumeralsKata
 
 class RomanNumeralsTests: XCTestCase {
-
-    // Subject under test
-    var sut: RomanNumerals!
+    var romanNumerals: RomanNumerals!
     
     override func setUp() {
         super.setUp()
 
-        sut = RomanNumerals()
+        romanNumerals = RomanNumerals()
     }
 
     // MARK: - Tests
 
-    func testConvert_should_return_I_when_input_is_1() {
-        // When
-        let result = sut.convert(number: 1)
+    func test_should_return_I_when_input_is_1() {
+        let result = romanNumerals.convert(number: 1)
 
-        // Then
         XCTAssertEqual(result, "I")
     }
 
-    func testConvert_should_return_V_when_input_is_5() {
-        // When
-        let result = sut.convert(number: 5)
+    func test_should_return_V_when_input_is_5() {
+        let result = romanNumerals.convert(number: 5)
 
         // Then
         XCTAssertEqual(result, "V")
     }
 
-    func testConvert_should_return_X_when_input_is_10() {
-        // When
-        let result = sut.convert(number: 10)
+    func test_should_return_X_when_input_is_10() {
+        let result = romanNumerals.convert(number: 10)
 
-        // Then
         XCTAssertEqual(result, "X")
     }
 
-    func testConvert_should_return_L_when_input_is_50() {
-        // When
-        let result = sut.convert(number: 50)
+    func test_should_return_L_when_input_is_50() {
+        let result = romanNumerals.convert(number: 50)
 
-        // Then
         XCTAssertEqual(result, "L")
     }
 
-    func testConvert_should_return_C_when_input_is_100() {
-        // When
-        let result = sut.convert(number: 100)
+    func test_should_return_C_when_input_is_100() {
+        let result = romanNumerals.convert(number: 100)
 
-        // Then
         XCTAssertEqual(result, "C")
     }
 
-    func testConvert_should_return_D_when_input_is_500() {
-        // When
-        let result = sut.convert(number: 500)
+    func test_should_return_D_when_input_is_500() {
+        let result = romanNumerals.convert(number: 500)
 
-        // Then
         XCTAssertEqual(result, "D")
     }
 
-    func testConvert_should_return_M_when_input_is_1000() {
-        // When
-        let result = sut.convert(number: 1000)
+    func test_should_return_M_when_input_is_1000() {
+        let result = romanNumerals.convert(number: 1000)
 
-        // Then
         XCTAssertEqual(result, "M")
     }
 
-    func testConvert_should_return_II_when_input_is_2() {
-        // When
-        let result = sut.convert(number: 2)
+    func test_should_return_II_when_input_is_2() {
+        let result = romanNumerals.convert(number: 2)
 
-        // Then
         XCTAssertEqual(result, "II")
     }
 
-    func testConvert_should_return_XVI_when_input_is_16() {
-        // When
-        let result = sut.convert(number: 16)
+    func test_should_return_XVI_when_input_is_16() {
+        let result = romanNumerals.convert(number: 16)
 
-        // Then
         XCTAssertEqual(result, "XVI")
     }
 
-    func testConvert_should_return_IV_when_input_is_4() {
-        // When
-        let result = sut.convert(number: 4)
+    func test_should_return_IV_when_input_is_4() {
+        let result = romanNumerals.convert(number: 4)
 
-        // Then
         XCTAssertEqual(result, "IV")
     }
 
-    func testConvert_should_return_IX_when_input_is_9() {
-        // When
-        let result = sut.convert(number: 9)
+    func test_should_return_IX_when_input_is_9() {
+        let result = romanNumerals.convert(number: 9)
 
-        // Then
         XCTAssertEqual(result, "IX")
     }
 
-    func testConvert_should_return_XL_when_input_is_40() {
-        // When
-        let result = sut.convert(number: 40)
+    func test_should_return_XL_when_input_is_40() {
+        let result = romanNumerals.convert(number: 40)
 
-        // Then
         XCTAssertEqual(result, "XL")
     }
 
-    func testConvert_should_return_XC_when_input_is_90() {
-        // When
-        let result = sut.convert(number: 90)
+    func test_should_return_XC_when_input_is_90() {
+        let result = romanNumerals.convert(number: 90)
 
-        // Then
         XCTAssertEqual(result, "XC")
     }
 
-    func testConvert_should_return_CD_when_input_is_400() {
-        // When
-        let result = sut.convert(number: 400)
+    func test_should_return_CD_when_input_is_400() {
+        let result = romanNumerals.convert(number: 400)
 
-        // Then
         XCTAssertEqual(result, "CD")
     }
 
-    func testConvert_should_return_CM_when_input_is_900() {
-        // When
-        let result = sut.convert(number: 900)
+    func test_should_return_CM_when_input_is_900() {
+        let result = romanNumerals.convert(number: 900)
 
-        // Then
         XCTAssertEqual(result, "CM")
     }
 
-    func testConvert_should_return_empty_string_when_input_is_0() {
-        // When
-        let result = sut.convert(number: 0)
+    func test_should_return_empty_string_when_input_is_0() {
+        let result = romanNumerals.convert(number: 0)
 
-        // Then
         XCTAssertEqual(result, "")
     }
 
