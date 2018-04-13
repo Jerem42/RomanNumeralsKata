@@ -77,4 +77,12 @@ class RomanNumeralsTests: XCTestCase {
         // Then
         XCTAssertEqual(result, "M")
     }
+
+    func testConvert_should_return_II_when_input_is_2() {
+        // When
+        let result = sut.convert(number: 2)
+
+        // Then
+        XCTAssertEqual(result, "II")
+    }
 }

@@ -25,8 +25,9 @@ struct RomanNumerals {
         var result = String()
 
         for romanTuple in romanAssociationArray {
-            if romanTuple.numeral == number {
-                result = romanTuple.roman
+            let repeatedRoman = Int(number / romanTuple.numeral)
+            if repeatedRoman >= 1 {
+                result = String(repeating: romanTuple.roman, count: repeatedRoman)
                 break
             }
         }
