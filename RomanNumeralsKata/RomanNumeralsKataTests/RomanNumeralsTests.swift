@@ -94,4 +94,52 @@ class RomanNumeralsTests: XCTestCase {
         XCTAssertEqual(result, "XVI")
     }
 
+    func testConvert_should_return_IV_when_input_is_4() {
+        // When
+        let result = sut.convert(number: 4)
+
+        // Then
+        XCTAssertEqual(result, "IV")
+    }
+
+    func testConvert_should_return_IX_when_input_is_9() {
+        // When
+        let result = sut.convert(number: 9)
+
+        // Then
+        XCTAssertEqual(result, "IX")
+    }
+
+    func testConvert_should_return_XL_when_input_is_40() {
+        // When
+        let result = sut.convert(number: 40)
+
+        // Then
+        XCTAssertEqual(result, "XL")
+    }
+
+    func testConvert_should_return_XC_when_input_is_90() {
+        // When
+        let result = sut.convert(number: 90)
+
+        // Then
+        XCTAssertEqual(result, "XC")
+    }
+
+    func testConvert_should_return_CD_when_input_is_400() {
+        // When
+        let result = sut.convert(number: 400)
+
+        // Then
+        XCTAssertEqual(result, "CD")
+    }
+
+    func testConvert_should_return_CM_when_input_is_900() {
+        // When
+        let result = sut.convert(number: 900)
+
+        // Then
+        XCTAssertEqual(result, "CM")
+    }
+
 }
