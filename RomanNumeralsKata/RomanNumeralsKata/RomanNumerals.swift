@@ -8,21 +8,28 @@
 
 import Foundation
 
+typealias RomanTuple = (roman: String, numeral: Int)
+
 struct RomanNumerals {
+    var romanAssociationArray: [RomanTuple] =
+        [
+            ("M", 1000),
+            ("D", 500),
+            ("C", 100),
+            ("L", 50),
+            ("X", 10),
+            ("V", 5),
+            ("I", 1)]
+
     func convert(number: Int) -> String {
-        if number == 1000 {
-            return "M"
-        } else if number == 500 {
-            return "D"
-        } else if number == 100 {
-            return "C"
-        } else if number == 50 {
-            return "L"
-        } else if number == 10 {
-            return "X"
-        } else if number == 5 {
-            return "V"
+        var result = String()
+
+        for romanTuple in romanAssociationArray {
+            if romanTuple.numeral == number {
+                result = romanTuple.roman
+                break
+            }
         }
-        return "I"
+        return result
     }
 }
