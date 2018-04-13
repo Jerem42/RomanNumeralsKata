@@ -30,4 +30,12 @@ class RomanNumeralsTests: XCTestCase {
         XCTAssertEqual(result, "I")
     }
 
+    func testConvert_should_return_V_when_input_is_5() {
+        // When
+        let result = sut.convert(number: 5)
+
+        // Then
+        XCTAssertEqual(result, "V")
+    }
+
 }

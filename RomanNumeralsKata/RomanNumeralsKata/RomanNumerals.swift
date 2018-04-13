@@ -10,6 +10,9 @@ import Foundation
 
 struct RomanNumerals {
     func convert(number: Int) -> String {
+        if number == 5 {
+            return "V"
+        }
         return "I"
     }
 }
